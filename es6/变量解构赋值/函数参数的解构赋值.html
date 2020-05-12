@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function add([x, y]){
+            return x + y;
+        }
+        let sum = add([2, 5]);
+        console.log(sum);//7
+ 
+        let calc = [[1, 2], [3, 4]].map(([a, b]) => a + b);
+        console.log(calc);//[3, 7]
+
+        function move({x, y} = { x: 0, y: 0 }) {
+            return [x, y];
+        }
+
+        move({x: 3, y: 8}); // [3, 8]
+        move({x: 3}); // [3, undefined]
+
+    </script>
+</body>
+</html>

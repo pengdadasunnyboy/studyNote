@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let和const</title>
+</head>
+<body>
+
+
+<script>
+
+    //特性: ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+    //不存在变量提升
+    //不允许重复声明
+
+    //2.暂时性死区
+    /* 只要块级作用域内存在let命令，它所声明的变量就“绑定”（binding）这个区域，不再受外部的影响。
+    ES6 明确规定，如果区块中存在let和const命令，这个区块对这些命令声明的变量，从一开始就形成了封闭作用域。凡是在声明之前就使用这些变量，就会报错。
+    总之，在代码块内，使用let命令声明变量之前，该变量都是不可用的。这在语法上，称为“暂时性死区”（temporal dead zone，简称 TDZ）。 */
+
+    
+     {
+         let a = 1;
+         var b = 2;
+     }
+     //console.log(a); //Uncaught ReferenceError: a is not defined
+     console.log(b); // 2
+
+    //存在变量提升
+     console.log(c);//undefined
+     var c = 1;
+
+</script>
+
+
+</body>
+</html>
